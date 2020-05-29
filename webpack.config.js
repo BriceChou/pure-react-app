@@ -1,13 +1,29 @@
 /** @format */
 
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
     app: './src/index.js',
     vendor: './src/next.js',
   },
-  plugins: [],
+  plugins: [
+    new CleanWebpackPlugin(),
+    // refer to: https://github.com/jaketrent/html-webpack-template
+    // source code: https://github.com/jantimon/html-webpack-plugin
+    new HtmlWebpackPlugin({
+      minify: {
+        //删除注释
+        removeComments: true,
+        //删除空格
+        collapseWhitespace: true,
+      },
+      filename: 'index.[hash].html',
+      title: 'Welcome to bricechou.',
+    }),
+  ],
   output: {
     filename: '[name].[hash].js',
     path: path.resolve(__dirname, 'dist'),
