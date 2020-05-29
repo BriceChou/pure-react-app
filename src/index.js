@@ -18,4 +18,4 @@ const testHandler = () => {
   console.log('hello ', brice?.chou?.name, brice?.chou?.comma?.str || '!', _.get(brice, 'comma', 'bricechou test es6'));
 };
 
-ReactDOM.render(<App fu={testHandler} />, document.getElementById('root'));
+ReactDOM.render(<App fu={testHandler} />, document.body);
