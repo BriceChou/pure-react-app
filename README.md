@@ -59,4 +59,10 @@ The compiler for next generation JavaScript. <https://babeljs.io>
 
 ### ESLint
 
-how add eslint for javascript: <https://eslint.org/>
+How to add eslint for javascript: <https://eslint.org/>
+
+You can try it with global install `eslint` without other config. Then you can just try it on your react project.
+
+We recommand you use the command `eslint --init` to initialize your config file.
+
+It's easy to use and you can select your best practice. Let's make your team or yourself have the same code style.
