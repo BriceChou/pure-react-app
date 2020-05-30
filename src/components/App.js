@@ -1,12 +1,12 @@
 /** @format */
 
-import '../../static/css/App.css';
-import React, { Component } from 'react';
-import logo from '../../static/image/logo.svg';
+import '../../static/css/App.css'
+import React, { Component } from 'react'
+import logo from '../../static/image/logo.svg'
 
 class App extends Component {
   render() {
-    this.props.fu();
+    this.props.fu()
     return (
       <div className="app">
         <div className="app-header">
@@ -14,11 +14,11 @@ class App extends Component {
           <h2>Welcome to React</h2>
         </div>
         <p className="app-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          To get started, edit <code>see 1src/App.js</code> and save to reload.
         </p>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

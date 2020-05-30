@@ -1,8 +1,8 @@
 /** @format */
 
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -10,7 +10,7 @@ module.exports = {
     vendor: './src/next.js',
   },
   plugins: [
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin(['dist'], { verbose: true, dry: false }),
     // refer to: https://github.com/jaketrent/html-webpack-template
     // source code: https://github.com/jantimon/html-webpack-plugin
     new HtmlWebpackPlugin({
@@ -58,4 +58,4 @@ module.exports = {
       },
     ],
   },
-};
+}

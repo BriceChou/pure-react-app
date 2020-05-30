@@ -30,7 +30,7 @@ The compiler for next generation JavaScript. <https://babeljs.io>
 - 'babel-loader': core compile loader for js
 - 'css-loader': core compile loader for css
 - 'file-loader': core compile loader for images, fonts
-- 'style-loader': core compile loader for css
+- 'style-loader': core compile insert css style link into html, need to use this loader before css loader.
 
 ### ESLint
 

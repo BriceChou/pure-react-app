@@ -1,0 +1,54 @@
+/** @format */
+
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  // 解析器类型
+  // espima(默认), babel-eslint, @typescript-eslint/parse
+  "parser": "babel-eslint",
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "settings": {
+    //自动发现React的版本，从而进行规范react代码
+    "react": {
+      "version": "detect"
+    }
+  },
+  // 解析器配置参数
+  "parserOptions": {
+    // 代码类型：script(默认), module
+    "sourceType": "module",
+    // es 版本号，默认为 5，也可以是用年份，比如 2015 (同 6)
+    "ecamVersion": 2019,
+    // es 特性配置
+    "ecmaFeatures": {
+      "globalReturn": true, // 允许在全局作用域下使用 return 语句
+      "impliedStrict": true, // 启用全局 strict mode
+      "jsx": true // 启用 JSX
+    }
+  },
+  "rules": {
+    /**
+     * "off" 或 0：关闭规则
+     * "warn" 或 1：开启规则，warn 级别的错误 (不会导致程序退出)
+     * "error" 或 2：开启规则，error级别的错误(当被触发的时候，程序会退出)
+     */
+    "semi": ["error", "never", { "beforeStatementContinuationChars": "always" }],
+    "quotes": ["error", "single"],
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "jsx-quotes": ["warn", "prefer-double"],
+    "no-console": "off",
+    "camelcase": "error"
+  },
+  "globals": {
+    // 声明 jQuery 对象为全局变量
+    // "$": false // true表示该变量为 writeable，而 false 表示 readonly
+  },
+  "plugins": [
+    "react" // eslint-plugin-react
+  ]
+}

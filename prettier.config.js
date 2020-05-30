@@ -4,7 +4,7 @@ module.exports = {
   // 一行最多 120 字符
   printWidth: 120,
   // 行尾需要有分号
-  semi: true,
+  semi: false,
   // 使用单引号
   singleQuote: true,
   // 对象的 key 仅在必要时用引号
@@ -32,4 +32,4 @@ module.exports = {
   requirePragma: false,
   // 换行符使用 lf
   endOfLine: 'lf',
-};
+}
