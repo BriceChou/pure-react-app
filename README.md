@@ -4,6 +4,31 @@
 
 Just create pure react app without any others components. I'll tell you how to create a pure react ?
 
+Before you start to build a pure react app, remind to watch console output every time. Even `warn` output in NODE console, you should care it. Like that:
+
+- `WARN`
+
+```bash
+WARN node unsupported "node@v7.9.0" is incompatible with babel-loader@8.1.0 › webpack@4.43.0 › watchpack@1.7.2 › chokidar@3.4.0 › readdirp@~3.4.0, expected node@>=8.10.0
+```
+
+- `deprecate`
+
+```bash
+deprecate babel-loader@8.1.0 › webpack@4.43.0 › watchpack@1.7.2 › watchpack-chokidar2@2.0.0 › chokidar@^2.1.8 Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies.
+```
+
+- `Error`
+
+```bash
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! bricechou.github.io@1.0.0 build: `webpack`
+npm ERR! Exit status 1
+```
+
+You should always guarantee that your `NPM` version is acceptable with plugin package version.
+
 ### Node
 
 - install node and npm, node website: <https://nodejs.org/en/>
@@ -34,4 +59,4 @@ The compiler for next generation JavaScript. <https://babeljs.io>
 
 ### ESLint
 
-how add eslint check for javascript: <https://eslint.org/>
+how add eslint for javascript: <https://eslint.org/>
