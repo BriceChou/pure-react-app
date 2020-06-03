@@ -8,8 +8,9 @@
     "es6": true
   },
   // 解析器类型
-  // espima(默认), babel-eslint, @typescript-eslint/parse
+  // espima(默认), babel-eslint, @typescript-eslint/parser
   "parser": "babel-eslint",
+  // "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:@typescript-eslint/all"],
   "extends": ["eslint:recommended", "plugin:react/recommended"],
   "settings": {
     //自动发现React的版本，从而进行规范react代码
@@ -17,18 +18,18 @@
       "version": "detect"
     }
   },
+  // "overrides": [
+  //   {
+  //     "files": ["*.stubs.ts", "*.test.ts"],
+  //     "rules": {
+  //       "@typescript-eslint/promise-function-async": "off"
+  //     }
+  //   }
+  // ],
   // 解析器配置参数
   "parserOptions": {
-    // 代码类型：script(默认), module
-    "sourceType": "module",
-    // es 版本号，默认为 5，也可以是用年份，比如 2015 (同 6)
-    "ecamVersion": 2019,
-    // es 特性配置
-    "ecmaFeatures": {
-      "globalReturn": true, // 允许在全局作用域下使用 return 语句
-      "impliedStrict": true, // 启用全局 strict mode
-      "jsx": true // 启用 JSX
-    }
+    // "project": "tsconfig.json"
+    "project": "babel.react.json"
   },
   "rules": {
     /**
@@ -42,7 +43,38 @@
     "linebreak-style": ["error", "unix"],
     "jsx-quotes": ["warn", "prefer-double"],
     "no-console": "off",
-    "camelcase": "error"
+    "camelcase": "error",
+    // "@typescript-eslint/require-array-sort-compare": "off",
+    // "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    // "@typescript-eslint/explicit-function-return-type": "off",
+    // "@typescript-eslint/explicit-module-boundary-types": "off",
+    // "@typescript-eslint/generic-type-naming": "off",
+    // "@typescript-eslint/init-declarations": "off",
+    // "@typescript-eslint/method-signature-style": "off",
+    // "@typescript-eslint/no-explicit-any": "off",
+    // "@typescript-eslint/no-magic-numbers": "off",
+    // "@typescript-eslint/no-parameter-properties": "off",
+    // "@typescript-eslint/no-type-alias": "off",
+    // "@typescript-eslint/no-unnecessary-boolean-literal-compare": "off",
+    // "@typescript-eslint/no-unnecessary-condition": "off",
+    // "@typescript-eslint/no-unsafe-assignment": "off",
+    // "@typescript-eslint/no-unsafe-call": "off",
+    // "@typescript-eslint/no-unsafe-member-acces": "off",
+    // "@typescript-eslint/no-unsafe-member-access": "off",
+    // "@typescript-eslint/no-unsafe-return": "off",
+    // "@typescript-eslint/no-untyped-public-signature": "off",
+    // "@typescript-eslint/no-unused-vars": "off",
+    // "@typescript-eslint/no-unused-vars-experimental": "off",
+    // "@typescript-eslint/no-use-before-define": "off",
+    // "@typescript-eslint/prefer-readonly-parameter-types": "off",
+    // "@typescript-eslint/prefer-reduce-type-parameter": "off",
+    // "@typescript-eslint/require-await": "off",
+    // "@typescript-eslint/restrict-template-expressions": "off",
+    // "@typescript-eslint/return-await": "off",
+    // "@typescript-eslint/strict-boolean-expressions": "off",
+    // "@typescript-eslint/switch-exhaustiveness-check": "off",
+    // "@typescript-eslint/typedef": "off",
+    "no-else-return": "error"
   },
   "globals": {
     // 声明 jQuery 对象为全局变量
@@ -50,5 +82,6 @@
   },
   "plugins": [
     "react" // eslint-plugin-react
+    // "@typescript-eslint"
   ]
 }

@@ -1,0 +1,9 @@
+{
+  "sourceType": "module",
+  "ecamVersion": 2019,
+  "ecmaFeatures": {
+    "globalReturn": true,
+    "impliedStrict": true,
+    "jsx": true
+  }
+}

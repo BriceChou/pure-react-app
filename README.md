@@ -4,6 +4,8 @@
 
 Just create pure react app without any others components. I'll tell you how to create a pure react ?
 
+## Introduction
+
 Before you start to build a pure react app, remind to watch console output every time. Even `warn` output in NODE console, you should care it. Like that:
 
 - `WARN`
@@ -43,7 +45,7 @@ How to quickly use webpack steps by steps: <https://webpack.js.org/concepts/>
 npm install --save-dev webpack webapck-cli
 ```
 
-**do not crate a webpack.config.js file by yourself**
+Remember: Do not crate a webpack.config.js file by yourself.
 
 ### Babel
 
@@ -66,3 +68,43 @@ You can try it with global install `eslint` without other config. Then you can j
 We recommand you use the command `eslint --init` to initialize your config file.
 
 It's easy to use and you can select your best practice. Let's make your team or yourself have the same code style.
+
+### TypeScript
+
+How to add typescript in your project: <https://www.typescriptlang.org>
+
+How to add ts into react app : <https://github.com/Microsoft/TypeScript-React-Starter>
+
+config for babel with ts: <https://github.com/basarat/typescript-react/tree/master/01%20bootstrap>
+
+```bash
+npm install -D typescript @types/react @types/react-dom ts-loader
+```
+
+Then you can add tsconfig file into your project. Let's do it like that: <https://github.com/microsoft/TypeScript-React-Starter/blob/master/tsconfig.json>
+
+```json
+{
+  "compilerOptions": {
+    "outDir": "build/dist",
+    "module": "commonjs",
+    "target": "es5",
+    "lib": ["es6", "dom"],
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "rootDir": "src",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true
+  },
+  "exclude": ["node_modules", "build", "scripts", "acceptance-tests", "webpack", "jest", "src/setupTests.ts"],
+  "types": ["typePatches"]
+}
+```
+
+Now we can add `TypeScrip ESLint` configure into your project, how to config it : <https://github.com/typescript-eslint/typescript-eslint>
+
+If you don't use `ESLint`. Also, you can select `TSLint`.
