@@ -33,6 +33,7 @@ module.exports = {
       {
         test: /\.css$/,
         include: path.resolve(__dirname, 'static/css'),
+        // 从右往左开始解析
         use: ['style-loader', 'css-loader'],
       },
       {
