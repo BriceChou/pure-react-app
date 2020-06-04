@@ -9,7 +9,7 @@ module.exports = {
     app: path.resolve(__dirname, 'src/index.ts'),
     vendor: path.resolve(__dirname, 'src/next.ts'),
   },
-  devtool: 'inline-source-map',
+  // devtool: 'inline-source-map',
   plugins: [
     new CleanWebpackPlugin(),
     // refer to: https://github.com/jaketrent/html-webpack-template
@@ -30,6 +30,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
+    symlinks: false,
     extensions: ['.tsx', '.ts', '.js'],
   },
   module: {
@@ -117,7 +118,15 @@ module.exports = {
         test: /\.tsx?$/,
         include: [path.resolve(__dirname, 'src')],
         exclude: /(node_modules)/,
-        use: ['ts-loader'],
+        use: [
+          {
+            loader: 'ts-loader',
+            options: {
+              transpileOnly: true,
+              experimentalWatchApi: true,
+            },
+          },
+        ],
       },
     ],
   },
