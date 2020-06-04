@@ -13,7 +13,7 @@
   // "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:@typescript-eslint/all"],
   "extends": ["eslint:recommended", "plugin:react/recommended"],
   "settings": {
-    //自动发现React的版本，从而进行规范react代码
+    // 自动发现React的版本，从而进行规范react代码
     "react": {
       "version": "detect"
     }
@@ -77,11 +77,13 @@
     "no-else-return": "error"
   },
   "globals": {
-    // 声明 jQuery 对象为全局变量
-    // "$": false // true表示该变量为 writeable，而 false 表示 readonly
+    // 例如：声明 jQuery 对象为全局变量
+    // true 表示该变量为 writeable，而 false 表示 readonly
+    // "$": false
   },
   "plugins": [
-    "react" // eslint-plugin-react
+    // eslint-plugin-react
+    "react"
     // "@typescript-eslint"
   ]
 }

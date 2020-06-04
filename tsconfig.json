@@ -27,7 +27,7 @@
     "strictNullChecks": true
   },
   "types": ["typePatches"],
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "scripts", "test/tests/**/*"],
+  "include": ["src/**/*", "index.d.ts"],
+  "exclude": ["node_modules", "dist", "scripts"],
   "compileOnSave": false
 }

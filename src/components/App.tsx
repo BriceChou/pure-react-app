@@ -4,7 +4,13 @@ import '../../static/css/App.css'
 import React, { Component } from 'react'
 import logo from '../../static/image/logo.svg'
 
-class App extends Component {
+interface PropsType {
+  fu: Function
+}
+
+interface StateType {}
+
+export default class App extends Component<PropsType, StateType> {
   render() {
     this.props.fu()
     return (
@@ -20,5 +26,3 @@ class App extends Component {
     )
   }
 }
-
-export default App

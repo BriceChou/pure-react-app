@@ -6,9 +6,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   entry: {
-    app: path.resolve(__dirname, 'src/index.js'),
-    vendor: path.resolve(__dirname, 'src/next.js'),
+    app: path.resolve(__dirname, 'src/index.ts'),
+    vendor: path.resolve(__dirname, 'src/next.ts'),
   },
+  devtool: 'inline-source-map',
   plugins: [
     new CleanWebpackPlugin(),
     // refer to: https://github.com/jaketrent/html-webpack-template
@@ -20,7 +21,7 @@ module.exports = {
         //删除空格
         collapseWhitespace: true,
       },
-      filename: 'index.[hash:8].html',
+      filename: 'index.html',
       title: 'Welcome to bricechou.',
     }),
   ],
@@ -29,7 +30,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.tsx', '.ts', '.js'],
   },
   module: {
     rules: [
@@ -112,10 +113,12 @@ module.exports = {
           },
         },
       },
-      // {
-      //   test: /\.tsx?$/,
-      //   use: 'ts-loader',
-      // },
+      {
+        test: /\.tsx?$/,
+        include: [path.resolve(__dirname, 'src')],
+        exclude: /(node_modules)/,
+        use: ['ts-loader'],
+      },
     ],
   },
 }
