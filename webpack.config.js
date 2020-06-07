@@ -9,9 +9,17 @@ module.exports = {
     app: path.resolve(__dirname, 'src/index.ts'),
     vendor: path.resolve(__dirname, 'src/next.ts'),
   },
-  // devtool: 'inline-source-map',
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist',
+  },
   plugins: [
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      // Write Logs to Console
+      verbose: true,
+      // Automatically remove all unused webpack assets on rebuild
+      cleanStaleWebpackAssets: false,
+    }),
     // refer to: https://github.com/jaketrent/html-webpack-template
     // source code: https://github.com/jantimon/html-webpack-plugin
     new HtmlWebpackPlugin({
