@@ -9,6 +9,9 @@ module.exports = {
     app: path.resolve(__dirname, 'src/index.ts'),
     vendor: path.resolve(__dirname, 'src/next.ts'),
   },
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+  },
   plugins: [
     new CleanWebpackPlugin({
       // Write Logs to Console
@@ -29,10 +32,6 @@ module.exports = {
       title: 'Welcome to bricechou.',
     }),
   ],
-  output: {
-    filename: '[name].[hash:8].js',
-    path: path.resolve(__dirname, 'dist'),
-  },
   optimization: {
     splitChunks: { chunks: 'all' },
   },

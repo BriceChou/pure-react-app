@@ -9,4 +9,7 @@ module.exports = merge(common, {
   devServer: {
     contentBase: './dist',
   },
+  output: {
+    filename: '[name].[hash:8].js',
+  },
 })
