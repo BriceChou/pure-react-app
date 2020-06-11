@@ -20,7 +20,6 @@
   "homepage": "https://github.com/BriceChou/bricechou.github.io#readme",
   "dependencies": {
     "react": "^16.13.1",
-    "lodash": "^4.17.15",
     "react-dom": "^16.13.1"
   },
   "devDependencies": {

@@ -7,8 +7,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   entry: {
-    app: path.resolve(__dirname, 'src/index.ts'),
-    vendor: path.resolve(__dirname, 'src/next.ts'),
+    app: path.resolve(__dirname, 'src/index.tsx'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -38,7 +37,10 @@ module.exports = {
     splitChunks: { chunks: 'all' },
   },
   resolve: {
+    // 配置引用缩写
+    // alias: {},
     symlinks: false,
+    // 够使用户在引入模块时不带扩展名
     extensions: ['.tsx', '.ts', '.js'],
   },
   module: {
@@ -111,17 +113,17 @@ module.exports = {
       //     },
       //   ],
       // },
-      {
-        test: /\.m?js$/,
-        include: [path.resolve(__dirname, 'src')],
-        exclude: /(node_modules)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            cacheDirectory: true,
-          },
-        },
-      },
+      // {
+      //   test: /\.m?js$/,
+      //   include: [path.resolve(__dirname, 'src')],
+      //   exclude: /(node_modules)/,
+      //   use: {
+      //     loader: 'babel-loader',
+      //     options: {
+      //       cacheDirectory: true,
+      //     },
+      //   },
+      // },
       {
         test: /\.tsx?$/,
         include: [path.resolve(__dirname, 'src')],
