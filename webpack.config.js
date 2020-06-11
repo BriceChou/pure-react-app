@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
+  mode: 'development',
   entry: {
     app: path.resolve(__dirname, 'src/index.ts'),
     vendor: path.resolve(__dirname, 'src/next.ts'),
@@ -36,6 +37,9 @@ module.exports = {
   output: {
     filename: '[name].[hash:8].js',
     path: path.resolve(__dirname, 'dist'),
+  },
+  optimization: {
+    splitChunks: { chunks: 'all' },
   },
   resolve: {
     symlinks: false,
