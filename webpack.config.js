@@ -24,13 +24,15 @@ module.exports = {
     // source code: https://github.com/jantimon/html-webpack-plugin
     new HtmlWebpackPlugin({
       cache: true,
+      // inject: 'head',
+      // scriptLoading: 'defer',
       favicon: path.resolve(__dirname, 'static/image/favicon.ico'),
-      meta: [
-        {
-          'http-equiv': 'X-UA-Compatible',
-          content: 'IE=edge',
-        },
-      ],
+      meta: {
+        xUACompatible: { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
+        viewport: 'width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover',
+        keywords: 'react, webpack, redux, typescript, bricechou',
+        description: 'just a pure react app created by bricechou.',
+      },
       minify: {
         //删除注释
         removeComments: true,
