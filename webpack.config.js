@@ -33,6 +33,26 @@ module.exports = {
         keywords: 'react, webpack, redux, typescript, bricechou',
         description: 'just a pure react app created by bricechou.',
       },
+      // more refer to : https://github.com/jantimon/html-webpack-plugin/tree/master/examples/template-parameters
+      // templateParameters: (compilation, assets, assetTags, options) => {
+      //   // XXX: add defer attribute into third-part script library
+      //   assetTags.bodyTags.forEach(tag => {
+      //     const { tagName, attributes } = tag
+      //     if ('script' === tagName && attributes && attributes.src.indexOf('vendor') > -1) {
+      //       tag.attributes.defer = true
+      //     }
+      //     return tag
+      //   })
+      //   return {
+      //     compilation,
+      //     webpackConfig: compilation.options,
+      //     htmlWebpackPlugin: {
+      //       tags: assetTags,
+      //       files: assets,
+      //       options,
+      //     },
+      //   }
+      // },
       minify: {
         //删除注释
         removeComments: true,
