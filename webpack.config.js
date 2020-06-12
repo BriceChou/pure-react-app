@@ -23,6 +23,14 @@ module.exports = {
     // refer to: https://github.com/jaketrent/html-webpack-template
     // source code: https://github.com/jantimon/html-webpack-plugin
     new HtmlWebpackPlugin({
+      cache: true,
+      favicon: path.resolve(__dirname, 'static/image/favicon.ico'),
+      meta: [
+        {
+          'http-equiv': 'X-UA-Compatible',
+          content: 'IE=edge',
+        },
+      ],
       minify: {
         //删除注释
         removeComments: true,
