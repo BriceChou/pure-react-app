@@ -7,4 +7,4 @@ import App from './components/App'
 
 const app = react.createElement(App)
 
-ReactDOM.render(app, document.body)
+ReactDOM.render(app, document.getElementById('root'))

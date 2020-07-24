@@ -26,6 +26,7 @@ module.exports = {
       cache: true,
       // inject: 'head',
       // scriptLoading: 'defer',
+      template: 'index.ejs',
       favicon: path.resolve(__dirname, 'static/image/favicon.ico'),
       meta: {
         xUACompatible: { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
