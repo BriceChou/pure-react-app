@@ -6,4 +6,5 @@ import ReactDOM from 'react-dom'
 import '../static/css/index.css'
 
 const app = react.createElement(App)
-ReactDOM.render(app, document.body)
+
+ReactDOM.render(app, document.getElementById('root'))
