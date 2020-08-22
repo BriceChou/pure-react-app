@@ -20,7 +20,7 @@ module.exports = {
   // 箭头函数，只有一个参数的时候，不需要括号
   arrowParens: 'avoid',
   // 需要自动在文件开头插入 @prettier
-  insertPragma: true,
+  insertPragma: false,
   // 使用 2 个空格缩进
   tabWidth: 2,
   // 不使用缩进符，而使用空格
