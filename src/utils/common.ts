@@ -1,9 +1,3 @@
-/**
- * 配上 vscode-faker 更香哦！
- * https://marketplace.visualstudio.com/items?itemName=deerawan.vscode-faker
- *
- * @format
- */
 export function random(targetArr: any[], probArr: any[]) {
   let sum = 0,
     factor = 0,
