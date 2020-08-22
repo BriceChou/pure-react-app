@@ -27,7 +27,7 @@ module.exports = {
       // inject: 'head',
       // scriptLoading: 'defer',
       template: 'index.ejs',
-      favicon: path.resolve(__dirname, 'static/image/favicon.ico'),
+      favicon: path.resolve(__dirname, 'static/img/favicon.ico'),
       meta: {
         xUACompatible: { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
         viewport: 'width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover',
@@ -84,7 +84,7 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpe?g|gif)$/,
-        include: path.resolve(__dirname, 'static/image'),
+        include: path.resolve(__dirname, 'static/img'),
         use: ['file-loader'],
       },
       // {
