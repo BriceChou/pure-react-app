@@ -1,6 +1,5 @@
 /** @format */
 
-import '../../static/css/App.css'
 import React, { Component } from 'react'
 import Layout from '../components/Layout'
 import type { DataErrorType } from '../mock/request'
