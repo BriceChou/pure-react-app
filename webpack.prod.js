@@ -8,6 +8,6 @@ module.exports = merge(common, {
   // if you want to debug your code on production enviornment, add 'source-map' into output file.
   // devtool: 'source-map',
   output: {
-    filename: '[name].js',
+    filename: '[name].[hash:8].js',
   },
 })

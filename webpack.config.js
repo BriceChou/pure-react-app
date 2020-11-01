@@ -7,10 +7,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   entry: {
+    vendor: ['react', 'react-dom'],
     app: path.resolve(__dirname, 'src/index.tsx'),
   },
   output: {
+    publicPath: '/',
+    filename: 'bundle-[chunkHash].js',
     path: path.resolve(__dirname, 'dist'),
+    chunkFilename: '[name]-[chunkHash].js',
   },
   plugins: [
     new MiniCssExtractPlugin(),
@@ -65,11 +69,20 @@ module.exports = {
     }),
   ],
   optimization: {
-    splitChunks: { chunks: 'all' },
+    splitChunks: {
+      chunks: 'all',
+      // name: 'vendor',
+    },
+  },
+  resolveLoader: {
+    modules: [path.resolve(__dirname, 'node_modules'), path.resolve(__dirname, 'webpack')],
   },
   resolve: {
     // 配置引用缩写
-    // alias: {},
+    // alias: {
+    //   'react-router': path.resolve(__dirname, '../packages/react-router'),
+    //   'react-router-dom': path.resolve(__dirname, '../packages/react-router-dom'),
+    // },
     symlinks: false,
     // 够使用户在引入模块时不带扩展名
     extensions: ['.tsx', '.ts', '.js'],

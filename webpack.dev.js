@@ -5,12 +5,22 @@ const common = require('./webpack.config.js')
 
 module.exports = merge(common, {
   mode: 'development',
-  devtool: 'inline-source-map',
-  devServer: {
-    port: 9988,
-    contentBase: './dist',
-  },
+  devtool: 'cheap-module-eval-source-map',
   output: {
-    filename: '[name].[hash:8].js',
+    filename: '[name].js',
   },
+  // devServer: {
+  //   historyApiFallback: true,
+  //   quiet: false,
+  //   noInfo: false,
+  //   publicPath: '/',
+  //   stats: {
+  //     assets: true,
+  //     version: false,
+  //     hash: false,
+  //     timings: false,
+  //     chunks: false,
+  //     chunkModules: true,
+  //   },
+  // },
 })
