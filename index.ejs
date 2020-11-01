@@ -2,20 +2,27 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
-  <script>
+
+<head>
+  <meta charset="utf-8" />
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+<script>
+  (function () {
     try {
-      var logoStyle = 'color: #fff; background: #027AFF; font-size: 16px; border-radius: 0 10px; padding: 5px;'
-      console.info('%c嘿～你发现了啥', 'color: #027AFF; font-size: 100px;')
-      console.info('%c联系方式 QQ：525003790，WeChatId: BriceChou', logoStyle)
-      console.info('%c no bug, no code, no one. mingliangzhou', logoStyle)
-      console.info('Copy from Alipay.')
-    } catch (error) {}
-  </script>
+      var logoStyle = 'color: #fff; background: #027AFF; font-size: 16px; border-radius: 0 10px; padding: 5px;';
+      console.info('%c嘿～你发现了啥', 'color: #027AFF; font-size: 100px;');
+      console.info('%c联系方式 QQ：525003790，WeChatId: BriceChou', logoStyle);
+      console.info('%c no bug, no code, no one. mingliangzhou', logoStyle);
+      console.info('Copy from Alipay.');
+    } catch (e) {
+      // Ignore.
+    }
+  })();
+</script>
+
 </html>
