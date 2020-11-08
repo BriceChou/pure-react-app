@@ -9,7 +9,7 @@
  */
 
 import type { DataStatusType } from '../types/api/dataStatus'
-import { random, md5SafeAdd, PROB_TENTH, isObjectNull } from '../utils/common'
+import { random, md5SafeAdd, PROB_TENTH, isObjectNull } from '../utils'
 
 export interface DataErrorType {
   data: any
@@ -39,11 +39,13 @@ function handleData(res: any) {
  * @param data 模拟数据回传状态体
  * @param params 用于检查请求参数
  */
-export function request<T>(data: T, params = {}): Promise<T> {
+export function request<T>(data: T, params = {}, timeout = 0): Promise<T> {
   if (!isObjectNull(params)) {
     console.log(params)
   }
-  const timeout = random([0.1, 0.2, 0.5, 1, 2], [0.2, 0.3, 0.3, 0.1, 0.1]) * 1000
+  if (!timeout) {
+    timeout = random([0.1, 0.2, 0.5, 1, 2], [0.2, 0.3, 0.3, 0.1, 0.1]) * 1000
+  }
   return new Promise((rs, rj) => {
     setTimeout(() => {
       try {
