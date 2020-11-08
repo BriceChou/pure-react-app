@@ -2,8 +2,8 @@
 
 import React, { Component } from 'react'
 import Layout from '../components/Layout'
+import { random, isObjectNull } from '../utils'
 import type { DataErrorType } from '../mock/request'
-import { random, isObjectNull } from '../utils/common'
 import { LoadingStatusEnum } from '../types/loadingStatus'
 import { request, getDataStatusMockData } from '../mock/request'
 import type { getIndexDataResponseType } from '../types/api/getIndexData'
