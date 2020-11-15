@@ -44,4 +44,5 @@ export default function Alert(props: PropsType) {
 /**
  * How to use?
  *
+ * <Alert message="hi bricechou, nice to meet u." type={'success'} visable={true} />
  */

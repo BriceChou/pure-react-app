@@ -13,10 +13,12 @@ import CountDown from '../../components/CountDown'
 import avatar from '../../../static/img/avatar.png'
 import BaseSelect from '../../components/BaseSelect'
 import LoadFailed from '../../components/LoadFailed'
+import StarRating from '../../components/StarRating'
+import BaseCheckbox from '../../components/BaseCheckbox'
 import RippleButton from '../../components/RippleButton'
 import TabHeader, { TabItem } from '../../components/TabHeader'
 import { LoadingStatusEnum, LoadingTypeEnum } from '../../types/enum/LoadingStatus'
-import StarRating from '../../components/StarRating'
+import Alert from '../../components/Alert'
 
 interface PropsType {
   pageLoading: LoadingStatusEnum
@@ -59,11 +61,13 @@ export default function Demo(props: PropsType) {
       ipsumsss: 'primis',
     },
   }
+  const options = [{ label: 'Item 1' }, { label: 'Item Two', checked: true }, { label: 'Item 3' }]
 
   const [isModal, setModal] = useState(false)
   console.log(isModal)
   return (
     <React.Fragment>
+      <Alert message="hi bricechou, nice to meet u." type={'success'} visable={true} />
       <Carousel
         carouselItems={[
           <img src={avatar} alt="404 Page not found" width={'10%'} height={'10%'} />,
@@ -93,6 +97,7 @@ export default function Demo(props: PropsType) {
         defaultValue={'hello word!'}
         placeholder={'请输入'}
       />
+      <BaseCheckbox options={options} onChange={console.log} />
       <BaseSelect values={choices} defaultValue={'lime'} onChange={console.log} />
       <Collapse>
         <h1>This is a collapse</h1>
