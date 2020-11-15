@@ -22,9 +22,9 @@ export default function Layout(props: PropsType) {
   }
   return (
     <React.Fragment>
-      <Header />
-      <Navigation />
-      {/* <Demo pageLoading={pageLoading} /> */}
+      {/* <Header />
+      <Navigation /> */}
+      <Demo pageLoading={pageLoading} />
     </React.Fragment>
   )
 }

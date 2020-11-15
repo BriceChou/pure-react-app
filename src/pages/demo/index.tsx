@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import Alert from '../../components/Alert'
+import Toast from '../../components/Toast'
 import Modal from '../../components/Modal'
 import ToolTip from '../../components/ToolTip'
 import Loading from '../../components/Loading'
@@ -18,7 +20,6 @@ import BaseCheckbox from '../../components/BaseCheckbox'
 import RippleButton from '../../components/RippleButton'
 import TabHeader, { TabItem } from '../../components/TabHeader'
 import { LoadingStatusEnum, LoadingTypeEnum } from '../../types/enum/LoadingStatus'
-import Alert from '../../components/Alert'
 
 interface PropsType {
   pageLoading: LoadingStatusEnum
@@ -97,6 +98,7 @@ export default function Demo(props: PropsType) {
         defaultValue={'hello word!'}
         placeholder={'请输入'}
       />
+      <Toast message="helo bricechou" title="tips" subTitle="just now" />
       <BaseCheckbox options={options} onChange={console.log} />
       <BaseSelect values={choices} defaultValue={'lime'} onChange={console.log} />
       <Collapse>
