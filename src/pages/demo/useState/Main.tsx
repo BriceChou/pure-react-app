@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import SubHooks from './SubHooks'
-import { LoadingStatusEnum } from '../../../types/loadingStatus'
+import { LoadingStatusEnum } from '../../../types/enum/LoadingStatus'
 
 interface PropsType {
   pageLoading: LoadingStatusEnum

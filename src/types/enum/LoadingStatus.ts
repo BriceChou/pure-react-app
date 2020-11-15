@@ -1,14 +1,14 @@
 /** @format */
 
 export enum LoadingStatusEnum {
-  Failed,
-  Loading,
-  Success,
+  FAILED,
+  LOADING,
+  SUCCESS,
 }
 
 export enum LoadingTypeEnum {
   // 页面
-  Page,
+  PAGE,
   // 浮层
-  Modal,
+  MODAL,
 }

@@ -1,10 +1,10 @@
 /** @format */
 
 import React, { Component } from 'react'
-import Layout from '../components/Layout'
+import Layout from '../public/Layout'
 import { random, isObjectNull } from '../utils'
 import type { DataErrorType } from '../mock/request'
-import { LoadingStatusEnum } from '../types/loadingStatus'
+import { LoadingStatusEnum } from '../types/enum/LoadingStatus'
 import { request, getDataStatusMockData } from '../mock/request'
 import type { getIndexDataResponseType } from '../types/api/getIndexData'
 
@@ -18,7 +18,7 @@ export default class App extends Component<PropsType, StateType> {
   constructor(props: any) {
     super(props)
     this.state = {
-      pageLoading: LoadingStatusEnum.Loading,
+      pageLoading: LoadingStatusEnum.SUCCESS,
     }
   }
 
@@ -53,11 +53,11 @@ export default class App extends Component<PropsType, StateType> {
       .then((res: getIndexDataResponseType) => {
         if (!isObjectNull(res) && !isObjectNull(res?.data)) {
           this.setState({
-            pageLoading: res?.data?.isLoading ? LoadingStatusEnum.Loading : LoadingStatusEnum.Success,
+            pageLoading: res?.data?.isLoading ? LoadingStatusEnum.LOADING : LoadingStatusEnum.SUCCESS,
           })
         } else {
           this.setState({
-            pageLoading: LoadingStatusEnum.Success,
+            pageLoading: LoadingStatusEnum.SUCCESS,
           })
         }
       })
@@ -65,19 +65,20 @@ export default class App extends Component<PropsType, StateType> {
         // TODO 获取请求失败
         console.warn(e)
         this.setState({
-          pageLoading: LoadingStatusEnum.Failed,
+          pageLoading: LoadingStatusEnum.FAILED,
         })
       })
   }
 
   componentDidMount() {
-    this.fetchIndexData()
+    // this.fetchIndexData()
   }
 
   render() {
     const {
       state: { pageLoading },
     } = this
+    React.createElement('div', { className: 'ss', value: '1' }, 'nice to meedt you')
     return <Layout pageLoading={pageLoading} />
   }
 }
