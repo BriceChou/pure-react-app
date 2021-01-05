@@ -2,7 +2,6 @@
 
 import React from 'react'
 import Header from './Header'
-import Demo from '../pages/demo'
 import Navigation from './Navigation'
 import Loading from '../components/Loading'
 import LoadFailed from '../components/LoadFailed'
@@ -21,10 +20,9 @@ export default function Layout(props: PropsType) {
     return <LoadFailed />
   }
   return (
-    <React.Fragment>
-      {/* <Header />
-      <Navigation /> */}
-      <Demo pageLoading={pageLoading} />
-    </React.Fragment>
+    <>
+      <Header />
+      <Navigation />
+    </>
   )
 }
