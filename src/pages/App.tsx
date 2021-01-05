@@ -78,7 +78,6 @@ export default class App extends Component<PropsType, StateType> {
     const {
       state: { pageLoading },
     } = this
-    React.createElement('div', { className: 'ss', value: '1' }, 'nice to meedt you')
     return <Layout pageLoading={pageLoading} />
   }
 }
