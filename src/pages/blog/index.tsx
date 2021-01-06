@@ -6,5 +6,6 @@ interface PropsType {
 }
 
 export default function Blog(props: PropsType) {
-  return <>Blog Id: {location.search}</>
+  const searchParams = location.search || 'hello'
+  return <> &gt; &gt; &gt; Blog Id : {searchParams}</>
 }

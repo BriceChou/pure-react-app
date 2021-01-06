@@ -9,18 +9,20 @@ module.exports = merge(common, {
   output: {
     filename: '[name].js',
   },
-  // devServer: {
-  //   historyApiFallback: true,
-  //   quiet: false,
-  //   noInfo: false,
-  //   publicPath: '/',
-  //   stats: {
-  //     assets: true,
-  //     version: false,
-  //     hash: false,
-  //     timings: false,
-  //     chunks: false,
-  //     chunkModules: true,
-  //   },
-  // },
+  devServer: {
+    port: 9988,
+    contentBase: './dist',
+    // historyApiFallback: true,
+    // quiet: false,
+    // noInfo: false,
+    // publicPath: '/',
+    // stats: {
+    //   assets: true,
+    //   version: false,
+    //   hash: false,
+    //   timings: false,
+    //   chunks: false,
+    //   chunkModules: true,
+    // },
+  },
 })

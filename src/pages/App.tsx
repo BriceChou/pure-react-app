@@ -1,5 +1,6 @@
 /** @format */
 
+import Blog from './blog'
 import Demo from './demo'
 import About from './about'
 import Layout from '../public/Layout'
@@ -10,7 +11,6 @@ import { LoadingStatusEnum } from '../types/enum/LoadingStatus'
 import { request, getDataStatusMockData } from '../mock/request'
 import { Redirect, Route, Switch, HashRouter } from 'react-router-dom'
 import type { getIndexDataResponseType } from '../types/api/getIndexData'
-import Blog from './blog'
 
 interface PropsType {}
 
@@ -89,13 +89,11 @@ export default class App extends Component<PropsType, StateType> {
           <Switch>
             <Route path="/demo" component={Demo} />
             <Route path="/about" component={About} />
-            <Route path="/blog" render={({ location }) => <Redirect to={`/blog/1${location.search}`} />} />
             <Route path="/blog/:id" component={Blog} />
-            <Route path="/index" render={({ location }) => <Redirect to={`/${location.search}`} />} />
-            <Route path="/" component={App} />
+            <Route path="/blog" render={({ location }) => <Redirect to={`/blog/1${location.search}`} />} />
+            <Route path="/" component={Layout} />
           </Switch>
         </HashRouter>
-        <div> Home page &gt;&gt;&gt;&gt; Welcome to you, my bro. </div>
       </>
     )
   }
