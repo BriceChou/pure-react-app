@@ -3,6 +3,7 @@
 import Blog from './blog'
 import Demo from './demo'
 import About from './about'
+import Login from './login'
 import Layout from '../public/Layout'
 import React, { Component } from 'react'
 import { random, isObjectNull } from '../utils'
@@ -89,6 +90,7 @@ export default class App extends Component<PropsType, StateType> {
           <Switch>
             <Route path="/demo" component={Demo} />
             <Route path="/about" component={About} />
+            <Route path="/login" component={Login} />
             <Route path="/blog/:id" component={Blog} />
             <Route path="/blog" render={({ location }) => <Redirect to={`/blog/1${location.search}`} />} />
             <Route path="/" component={Layout} />

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import React, { useState } from 'react'
 import Alert from '../../components/Alert'
 import Toast from '../../components/Toast'
@@ -65,9 +66,12 @@ export default function Demo(props: PropsType) {
   const options = [{ label: 'Item 1' }, { label: 'Item Two', checked: true }, { label: 'Item 3' }]
 
   const [isModal, setModal] = useState(false)
-  console.log(isModal)
   return (
     <React.Fragment>
+      <nav>
+        <Link to="/">go to Home</Link>
+      </nav>
+      <br />
       <Alert message="hi bricechou, nice to meet u." type={'success'} visable={true} />
       <Carousel
         carouselItems={[

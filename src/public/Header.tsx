@@ -21,7 +21,7 @@ export default function Header(props: PropsType) {
             <p className="text-white-75 font-weight-bold mb-5">
               When you always be a beginner, great lives never go out.
             </p>
-            <a className="btn btn-primary btn-xl" href="#">
+            <a className="btn btn-primary btn-xl" href="#demo">
               Start to explore
             </a>
           </div>

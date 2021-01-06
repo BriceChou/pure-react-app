@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { LoadingStatusEnum } from '../../types/enum/LoadingStatus'
 
 interface PropsType {
@@ -6,5 +7,12 @@ interface PropsType {
 }
 
 export default function About(props: PropsType) {
-  return <>About me!</>
+  return (
+    <>
+      Redirect About me!
+      <nav>
+        <Link to="/">go to Home</Link>
+      </nav>
+    </>
+  )
 }

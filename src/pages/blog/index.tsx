@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink, Link } from 'react-router-dom'
 import { LoadingStatusEnum } from '../../types/enum/LoadingStatus'
 
 interface PropsType {
@@ -7,5 +8,15 @@ interface PropsType {
 
 export default function Blog(props: PropsType) {
   const searchParams = location.search || 'hello'
-  return <> &gt; &gt; &gt; Blog Id : {searchParams}</>
+  return (
+    <>
+      {' '}
+      &gt; &gt; &gt; Blog Id : {searchParams} <br />
+      <NavLink to="/demo" activeClassName="hurray">
+        go to demo page
+      </NavLink>
+      <br />
+      <Link to="/">go to Home</Link>
+    </>
+  )
 }
