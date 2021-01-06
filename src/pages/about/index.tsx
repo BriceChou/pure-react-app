@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { LoadingStatusEnum } from '../../types/enum/LoadingStatus'
+import { LoadingStatusEnum } from '@type/enum/LoadingStatus'
 
 interface PropsType {
   pageLoading: LoadingStatusEnum

@@ -79,10 +79,14 @@ module.exports = {
   },
   resolve: {
     // 配置引用缩写
-    // alias: {
-    //   'react-router': path.resolve(__dirname, '../packages/react-router'),
-    //   'react-router-dom': path.resolve(__dirname, '../packages/react-router-dom'),
-    // },
+    alias: {
+      '@mock': path.resolve(__dirname, 'src/mock'),
+      '@css': path.resolve(__dirname, 'static/css'),
+      '@type': path.resolve(__dirname, 'src/types'),
+      '@utils': path.resolve(__dirname, 'src/utils'),
+      '@image': path.resolve(__dirname, 'static/img'),
+      '@component': path.resolve(__dirname, 'src/components'),
+    },
     symlinks: false,
     // 够使用户在引入模块时不带扩展名
     extensions: ['.tsx', '.ts', '.js'],

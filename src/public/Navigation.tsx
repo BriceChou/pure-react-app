@@ -35,13 +35,13 @@ export default function Navigation(props: PropsType) {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link js-scroll-trigger" href="#login">
-                Login
+              <a className="nav-link js-scroll-trigger" href="#demo">
+                Demo
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link js-scroll-trigger" href="#demo">
-                Demo
+              <a className="nav-link js-scroll-trigger" href="#login">
+                Login
               </a>
             </li>
           </ul>

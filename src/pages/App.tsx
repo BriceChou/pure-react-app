@@ -8,10 +8,10 @@ import Layout from '../public/Layout'
 import React, { Component } from 'react'
 import { random, isObjectNull } from '../utils'
 import type { DataErrorType } from '../mock/request'
-import { LoadingStatusEnum } from '../types/enum/LoadingStatus'
-import { request, getDataStatusMockData } from '../mock/request'
+import { LoadingStatusEnum } from '@type/enum/LoadingStatus'
+import { request, getDataStatusMockData } from '@mock/request'
 import { Redirect, Route, Switch, HashRouter } from 'react-router-dom'
-import type { getIndexDataResponseType } from '../types/api/getIndexData'
+import type { getIndexDataResponseType } from '@type/api/getIndexData'
 
 interface PropsType {}
 

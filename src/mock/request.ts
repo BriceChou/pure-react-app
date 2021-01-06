@@ -8,8 +8,8 @@
  * @author bricechou@gmail.com
  */
 
-import type { DataStatusType } from '../types/api/dataStatus'
-import { random, md5SafeAdd, PROB_TENTH, isObjectNull } from '../utils'
+import type { DataStatusType } from '@type/api/dataStatus'
+import { random, md5SafeAdd, PROB_TENTH, isObjectNull } from '@utils'
 
 export interface DataErrorType {
   data: any

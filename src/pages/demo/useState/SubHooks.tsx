@@ -1,5 +1,5 @@
-import React, { useRef, useState, memo, useEffect } from 'react'
-import { LoadingStatusEnum } from '../../../types/enum/LoadingStatus'
+import React, { useRef, useState, useEffect } from 'react'
+import { LoadingStatusEnum } from '@type/enum/LoadingStatus'
 
 interface PropsType {
   status: LoadingStatusEnum

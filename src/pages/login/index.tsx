@@ -1,7 +1,7 @@
+import Modal from '@component/Modal'
 import React, { useState } from 'react'
-import Modal from '../../components/Modal'
 import { Redirect } from 'react-router-dom'
-import { LoadingStatusEnum } from '../../types/enum/LoadingStatus'
+import { LoadingStatusEnum } from '@type/enum/LoadingStatus'
 
 interface PropsType {
   pageLoading: LoadingStatusEnum
@@ -25,9 +25,16 @@ export default function Login(props: PropsType) {
 
   const footerCompoent = (
     <>
-      <button onClick={onClose(LoginStatusEnum.SUCCESS)}>confirm</button>
-      <br />
-      <button onClick={onClose(LoginStatusEnum.CANCELLED)}>cancel</button>
+      <button
+        type="button"
+        data-dismiss="modal"
+        className="btn btn-secondary"
+        onClick={onClose(LoginStatusEnum.CANCELLED)}>
+        Close
+      </button>
+      <button type="button" className="btn btn-primary" onClick={onClose(LoginStatusEnum.SUCCESS)}>
+        Confirm
+      </button>
     </>
   )
 

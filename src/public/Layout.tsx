@@ -3,9 +3,9 @@
 import React from 'react'
 import Header from './Header'
 import Navigation from './Navigation'
-import Loading from '../components/Loading'
-import LoadFailed from '../components/LoadFailed'
-import { LoadingStatusEnum, LoadingTypeEnum } from '../types/enum/LoadingStatus'
+import Loading from '@component/Loading'
+import LoadFailed from '@component/LoadFailed'
+import { LoadingStatusEnum, LoadingTypeEnum } from '@type/enum/LoadingStatus'
 
 interface PropsType {
   pageLoading: LoadingStatusEnum
