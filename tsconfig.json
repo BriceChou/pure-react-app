@@ -2,12 +2,12 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@mock/*": ["src/mock/*"],
       "@css/*": ["static/css/*"],
       "@type/*": ["src/types/*"],
-      "@utils/*": ["src/utils/*"],
       "@image/*": ["static/img/*"],
       "@component/*": ["src/components/*"],
+      "@mock/*": ["src/mock/*", "src/mock"],
+      "@utils": ["src/utils/*", "src/utils"],
     },
     "alwaysStrict": true,
     "declaration": true,
