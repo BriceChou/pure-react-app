@@ -4,10 +4,12 @@ import Blog from './blog'
 import Demo from './demo'
 import About from './about'
 import Login from './login'
+import AuthExample from './auth'
 import Layout from '../public/Layout'
 import React, { Component } from 'react'
-import { random, isObjectNull } from '../utils'
-import type { DataErrorType } from '../mock/request'
+import { random, isObjectNull } from '@utils'
+import LoadFailed from '@component/LoadFailed'
+import type { DataErrorType } from '@mock/request'
 import { LoadingStatusEnum } from '@type/enum/LoadingStatus'
 import { request, getDataStatusMockData } from '@mock/request'
 import { Redirect, Route, Switch, HashRouter } from 'react-router-dom'
@@ -88,12 +90,16 @@ export default class App extends Component<PropsType, StateType> {
       <>
         <HashRouter>
           <Switch>
+            <Route exact path="/" component={Layout} />
             <Route path="/demo" component={Demo} />
             <Route path="/about" component={About} />
             <Route path="/login" component={Login} />
             <Route path="/blog/:id" component={Blog} />
+            <Route path="/auth" component={AuthExample} />
             <Route path="/blog" render={({ location }) => <Redirect to={`/blog/1${location.search}`} />} />
-            <Route path="/" component={Layout} />
+            <Route path="*">
+              <LoadFailed />
+            </Route>
           </Switch>
         </HashRouter>
       </>

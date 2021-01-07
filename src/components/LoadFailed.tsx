@@ -1,8 +1,8 @@
 /** @format */
 
 import React from 'react'
-import page_not_found from '../../static/img/404.svg'
-import { LoadingTypeEnum } from '../types/enum/LoadingStatus'
+import page_not_found from '@image/404.svg'
+import { LoadingTypeEnum } from '@type/enum/LoadingStatus'
 
 interface PropsType {
   type?: LoadingTypeEnum
