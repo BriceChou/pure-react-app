@@ -5,10 +5,11 @@
   "author": "bricechou",
   "description": "learning, coding and talking.",
   "scripts": {
+    "start": "node server.js",
     "watch": "webpack --watch",
     "build": "webpack --config webpack.prod.js",
     "build-dev": "webpack --config webpack.dev.js",
-    "start-server": "node server.js",
+    "test-parallel": "npm-run-all --parallel build* start*",
     "start-client": "webpack-dev-server --open --config webpack.dev.js"
   },
   "repository": {

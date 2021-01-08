@@ -1,7 +1,8 @@
 /** @format */
 
+import '@css/header.css'
 import React from 'react'
-import '../../static/css/header.css'
+import { Link } from 'react-router-dom'
 
 interface PropsType {}
 
@@ -21,9 +22,9 @@ export default function Header(props: PropsType) {
             <p className="text-white-75 font-weight-bold mb-5">
               When you always be a beginner, great lives never go out.
             </p>
-            <a className="btn btn-primary btn-xl" href="#demo">
+            <Link className="btn btn-primary btn-xl" to="/demo">
               Start to explore
-            </a>
+            </Link>
           </div>
         </div>
       </div>

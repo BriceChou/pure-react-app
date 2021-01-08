@@ -12,7 +12,7 @@ import { HashRouter, Switch, Route, Link, useHistory, useLocation, useParams } f
 
 export default function ModalGalleryExample() {
   return (
-    <HashRouter>
+    <HashRouter basename="/bricechou" hashType="noslash">
       <ModalSwitch />
     </HashRouter>
   )

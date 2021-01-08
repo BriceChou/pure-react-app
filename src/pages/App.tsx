@@ -89,11 +89,11 @@ export default class App extends Component<PropsType, StateType> {
 
     return (
       <>
-        <HashRouter>
+        <HashRouter basename="/bricechou" hashType="noslash">
           <Switch>
-            <Route exact path="/" component={Layout} />
+            <Route strict exact path={['/', '/index']} component={Layout} />
             <Route path="/demo" component={Demo} />
-            <Route path="/about" component={About} />
+            <Route path="/about" sensitive={false} component={About} />
             <Route path="/login" component={Login} />
             <Route path="/gallery" component={Gallery} />
             <Route path="/blog/:id" component={Blog} />

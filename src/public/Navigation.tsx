@@ -1,6 +1,7 @@
 /** @format */
 
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 interface PropsType {}
 
@@ -9,9 +10,7 @@ export default function Navigation(props: PropsType) {
   return (
     <nav className="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
       <div className="container">
-        <a className="navbar-brand js-scroll-trigger" href="#">
-          Listen to BriceChou
-        </a>
+        <a className="navbar-brand js-scroll-trigger">Listen to BriceChou</a>
         <button
           className="navbar-toggler navbar-toggler-right"
           type="button"
@@ -25,24 +24,24 @@ export default function Navigation(props: PropsType) {
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav ml-auto my-2 my-lg-0">
             <li className="nav-item">
-              <a className="nav-link js-scroll-trigger" href="#about">
+              <Link className="nav-link js-scroll-trigger" to="/about">
                 About
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link js-scroll-trigger" href="#blog">
+              <Link className="nav-link js-scroll-trigger" to="/blog">
                 Blog
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link js-scroll-trigger" href="#demo">
+              <Link className="nav-link js-scroll-trigger" to="/demo">
                 Demo
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link js-scroll-trigger" href="#login">
+              <Link className="nav-link js-scroll-trigger" to="/login">
                 Login
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
