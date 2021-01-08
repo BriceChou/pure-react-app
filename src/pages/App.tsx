@@ -4,6 +4,7 @@ import Blog from './blog'
 import Demo from './demo'
 import About from './about'
 import Login from './login'
+import Gallery from './gallery'
 import AuthExample from './auth'
 import Layout from '../public/Layout'
 import React, { Component } from 'react'
@@ -12,8 +13,8 @@ import { random, isObjectNull } from '@utils'
 import LoadFailed from '@component/LoadFailed'
 import { request, getDataStatusMockData } from '@mock'
 import { LoadingStatusEnum } from '@type/LoadingStatusEnum'
-import { Redirect, Route, Switch, HashRouter } from 'react-router-dom'
 import type { getIndexDataResponseType } from '@type/getIndexData'
+import { Redirect, Route, Switch, HashRouter } from 'react-router-dom'
 
 interface PropsType {}
 
@@ -94,6 +95,7 @@ export default class App extends Component<PropsType, StateType> {
             <Route path="/demo" component={Demo} />
             <Route path="/about" component={About} />
             <Route path="/login" component={Login} />
+            <Route path="/gallery" component={Gallery} />
             <Route path="/blog/:id" component={Blog} />
             <Route path="/auth" component={AuthExample} />
             <Route path="/blog" render={({ location }) => <Redirect to={`/blog/1${location.search}`} />} />

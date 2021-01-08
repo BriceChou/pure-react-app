@@ -1,5 +1,3 @@
-// https://usehooks.com/useKeyPress/
-
 import { useState, useEffect } from 'react'
 
 // Usage

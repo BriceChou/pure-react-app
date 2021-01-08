@@ -1,5 +1,3 @@
-// https://usehooks.com/useRouter/
-
 import { useMemo } from 'react'
 import { getQueryParams } from '@utils'
 // import queryString from 'query-string';
