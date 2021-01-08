@@ -8,7 +8,8 @@
  * @author bricechou@gmail.com
  */
 
-import type { DataStatusType } from '@type/api/dataStatus'
+import { addDaysToDate } from '@utils'
+import type { DataStatusType } from '@type/dataStatus'
 import { random, md5SafeAdd, PROB_TENTH, isObjectNull } from '@utils'
 
 export interface DataErrorType {
@@ -108,6 +109,92 @@ export function getDataStatusMockData(threshold = 1): DataStatusType {
     signature,
   }
 }
+
+/**
+ * 获取最小到最大之间的数字
+ *
+ * @param minNum 最小数字
+ * @param maxNum 最大数字
+ */
+export function getRandomNum(minNum: number, maxNum: number) {
+  switch (arguments.length) {
+    case 1:
+      // @ts-ignore
+      return handleNull(parseInt(Math.random() * minNum + 1, 10))
+    case 2:
+      // @ts-ignore
+      return handleNull(parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10))
+    default:
+  }
+  return 0
+}
+
+/**
+ *
+ * 获取随机字符串
+ *
+ * @param length 32
+ * @param chars '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+ */
+export function getRandomStr(length = 0, chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ') {
+  if (length > 0) {
+    let result = ''
+    for (let i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)]
+    return handleNull(result)
+  }
+  return handleNull(Math.random().toString(36).slice(-8))
+}
+
+/**
+ * 获取随机 boolean 值
+ */
+export function getRandomBool() {
+  return handleNull(!!getRandomNum(0, 1))
+}
+
+/**
+ * 可能有 10% 的概率返回 undefiend
+ *
+ * @param res 任意数值
+ */
+export function handleNull(res: any) {
+  return Math.random() * 10 <= 9 ? res : void 0
+}
+
+/**
+ * 获取随机数字 ID
+ *
+ * @param size ID 长度
+ */
+export function getRandomId(size: number) {
+  return handleNull(getRandomStr(size, '0123456789'))
+}
+
+/**
+ * 获取随机日期
+ */
+export function getRandomDate() {
+  const days = getRandomNum(0, 999) || 0
+  const now = new Date()
+  return handleNull(addDaysToDate(now, days * (Math.random() * 10 <= 5 ? 1 : -1)))
+}
+
+/**
+ *
+ * refer to https://pravatar.cc/
+ *
+ * @param size 图片大小
+ * @param id 图片ID -> [0, 70]
+ */
+export function getRandomAvatar(size = 300, id = 0) {
+  return `https://i.pravatar.cc/${size}?img=${id || getRandomNum(0, 70)}`
+}
+
+/**
+ * 获取随机图片
+ * refer to : https://www.pexels.com/api/documentation/
+ */
+export function getRandomImage() {}
 
 // how to use ?
 // step 1.

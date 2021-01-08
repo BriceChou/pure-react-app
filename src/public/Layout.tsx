@@ -5,7 +5,7 @@ import Header from './Header'
 import Navigation from './Navigation'
 import Loading from '@component/Loading'
 import LoadFailed from '@component/LoadFailed'
-import { LoadingStatusEnum, LoadingTypeEnum } from '@type/enum/LoadingStatus'
+import { LoadingStatusEnum, LoadingTypeEnum } from '@type/LoadingStatusEnum'
 
 interface PropsType {
   pageLoading: LoadingStatusEnum

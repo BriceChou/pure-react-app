@@ -6,7 +6,7 @@
       "@type/*": ["src/types/*"],
       "@image/*": ["static/img/*"],
       "@component/*": ["src/components/*"],
-      "@mock/*": ["src/mock/*", "src/mock"],
+      "@mock": ["src/mock/*", "src/mock"],
       "@utils": ["src/utils/*", "src/utils"],
     },
     "alwaysStrict": true,

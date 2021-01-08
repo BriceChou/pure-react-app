@@ -1,7 +1,7 @@
 import Modal from '@component/Modal'
 import React, { useState } from 'react'
 import { Redirect } from 'react-router-dom'
-import { LoadingStatusEnum } from '@type/enum/LoadingStatus'
+import { LoadingStatusEnum } from '@type/LoadingStatusEnum'
 
 interface PropsType {
   pageLoading: LoadingStatusEnum

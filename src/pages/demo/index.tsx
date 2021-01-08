@@ -20,7 +20,7 @@ import StarRating from '@component/StarRating'
 import BaseCheckbox from '@component/BaseCheckbox'
 import RippleButton from '@component/RippleButton'
 import TabHeader, { TabItem } from '@component/TabHeader'
-import { LoadingStatusEnum, LoadingTypeEnum } from '@type/enum/LoadingStatus'
+import { LoadingStatusEnum, LoadingTypeEnum } from '@type/LoadingStatusEnum'
 
 interface PropsType {
   pageLoading: LoadingStatusEnum

@@ -7,13 +7,13 @@ import Login from './login'
 import AuthExample from './auth'
 import Layout from '../public/Layout'
 import React, { Component } from 'react'
+import type { DataErrorType } from '@mock'
 import { random, isObjectNull } from '@utils'
 import LoadFailed from '@component/LoadFailed'
-import type { DataErrorType } from '@mock/request'
-import { LoadingStatusEnum } from '@type/enum/LoadingStatus'
-import { request, getDataStatusMockData } from '@mock/request'
+import { request, getDataStatusMockData } from '@mock'
+import { LoadingStatusEnum } from '@type/LoadingStatusEnum'
 import { Redirect, Route, Switch, HashRouter } from 'react-router-dom'
-import type { getIndexDataResponseType } from '@type/api/getIndexData'
+import type { getIndexDataResponseType } from '@type/getIndexData'
 
 interface PropsType {}
 

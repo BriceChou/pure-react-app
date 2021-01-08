@@ -1,5 +1,5 @@
 import React from 'react'
-import { LoadingStatusEnum } from '@type/enum/LoadingStatus'
+import { LoadingStatusEnum } from '@type/LoadingStatusEnum'
 import { NavLink, Link, useParams, useRouteMatch, useLocation, useHistory } from 'react-router-dom'
 
 interface PropsType {

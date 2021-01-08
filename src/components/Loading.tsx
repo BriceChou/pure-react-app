@@ -2,7 +2,7 @@
 
 import React from 'react'
 import '../../static/css/loading.css'
-import { LoadingTypeEnum } from '../types/enum/LoadingStatus'
+import { LoadingTypeEnum } from '../types/LoadingStatusEnum'
 
 interface PropsType {
   size?: number
