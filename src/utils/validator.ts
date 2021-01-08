@@ -1,6 +1,6 @@
 // 正则大全: https://any86.github.io/any-rule/
 
-type ValidatorType =
+export type ValidatorType =
   | 'taxNo'
   | 'cnName'
   | 'enName'
@@ -11,7 +11,7 @@ type ValidatorType =
   | 'identityNo'
   | 'tel'
 
-function isValid(type: ValidatorType, v: string | number, encryptVal?: string, regExp?: RegExp) {
+export function isValid(type: ValidatorType, v: string | number, encryptVal?: string, regExp?: RegExp) {
   if (v == void 0 || v == null) {
     return !!0
   }
@@ -55,6 +55,3 @@ function isValid(type: ValidatorType, v: string | number, encryptVal?: string, r
   // 默认不为空
   return !!v
 }
-
-export { isValid }
-export type { ValidatorType }

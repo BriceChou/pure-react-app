@@ -1,6 +1,6 @@
-const PROB_TENTH = Array(10).fill(0.1)
+export const PROB_TENTH = Array(10).fill(0.1)
 
-function random(targetArr: any[], probArr: any[]) {
+export function random(targetArr: any[], probArr: any[]) {
   let sum = 0,
     factor = 0,
     random = Math.random()
@@ -16,5 +16,3 @@ function random(targetArr: any[], probArr: any[]) {
   }
   return null
 }
-
-export { PROB_TENTH, random }
