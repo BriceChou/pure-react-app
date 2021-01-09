@@ -37,6 +37,6 @@
   },
   "types": ["typePatches"],
   "include": ["src/**/*", "index.d.ts"],
-  "exclude": ["node_modules", "dist", "scripts"],
+  "exclude": ["node_modules", "dist", "scripts", "webpack*"],
   "compileOnSave": false
 }

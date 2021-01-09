@@ -7,14 +7,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   entry: {
-    vendor: ['react', 'react-dom'],
     app: path.resolve(__dirname, 'src/index.tsx'),
+    vendor: ['react', 'react-dom', 'react-router-dom'],
   },
   output: {
     publicPath: '/',
-    filename: 'bundle-[chunkHash].js',
+    filename: 'bundle-[hash:8].js',
     path: path.resolve(__dirname, 'dist'),
-    chunkFilename: '[name]-[chunkHash].js',
+    chunkFilename: 'chunk[id]-[chunkHash:8].js',
   },
   plugins: [
     new MiniCssExtractPlugin(),

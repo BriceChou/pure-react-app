@@ -1,17 +1,24 @@
 /** @format */
 
-const merge = require('webpack-merge')
-const common = require('./webpack.config.js')
+const merge = require('webpack-merge'),
+  common = require('./webpack.config'),
+  path = require('path'),
+  pkg = require('./package')
 
 module.exports = merge(common, {
   mode: 'development',
   devtool: 'cheap-module-eval-source-map',
   output: {
+    // pathinfo: true,
+    publicPath: '/',
     filename: '[name].js',
   },
   devServer: {
-    port: 9988,
-    contentBase: './dist',
+    port: pkg.config.port || 9988,
+    contentBase: path.join(__dirname, 'dist'),
+    // proxy: { // proxy URLs to backend development server
+    //   '/api': 'http://localhost:3000'
+    // },
     // historyApiFallback: true,
     // quiet: false,
     // noInfo: false,
