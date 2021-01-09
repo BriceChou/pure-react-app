@@ -2,11 +2,11 @@ import type { ActionType } from '.'
 
 const UPDATE = 'TSET_UPDATE'
 
-const initState: SateType = {
+export const initTestState: TestSateType = {
   hello: '',
 }
 
-export interface SateType {
+export interface TestSateType {
   hello: string
 }
 
@@ -29,7 +29,7 @@ export const updateTest = (text: string) => ({
  * @param state test init state
  * @param action dispatch value
  */
-export default function testReducer(state = initState, action: ActionType<SateType>): SateType {
+export default function testReducer(state = initTestState, action: ActionType<TestSateType>): TestSateType {
   const { type, payload } = action
   switch (type) {
     case UPDATE:

@@ -3,11 +3,11 @@ import React from 'react'
 import App from './pages/App'
 import '@css/bootstrap.min.css'
 import ReactDOM from 'react-dom'
-import rootReducer from './stores'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
+import { rootReducer, rootInitState } from '@stores'
 
-const store = createStore(rootReducer)
+const store = createStore(rootReducer, rootInitState)
 
 ReactDOM.render(
   <Provider store={store}>

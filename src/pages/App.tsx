@@ -2,6 +2,7 @@
 
 import Blog from './blog'
 import Demo from './demo'
+import Test from './test'
 import About from './about'
 import Login from './login'
 import Gallery from './gallery'
@@ -95,6 +96,7 @@ export default class App extends Component<PropsType, StateType> {
             <Route path="/demo" component={Demo} />
             <Route path="/about" sensitive={false} component={About} />
             <Route path="/login" component={Login} />
+            <Route path="/test" component={Test} />
             <Route path="/gallery" component={Gallery} />
             <Route path="/blog/:id" component={Blog} />
             <Route path="/auth" component={AuthExample} />

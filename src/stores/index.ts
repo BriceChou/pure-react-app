@@ -1,11 +1,20 @@
-import testReducer from './test'
 import { combineReducers } from 'redux'
+import type { TestSateType } from './test'
+import testReducer, { initTestState } from './test'
 
 export interface ActionType<T> {
-  type: string
   payload: T
+  type: string
 }
 
-export default combineReducers({
-  testReducer,
+export const rootInitState: RootStateType = {
+  testState: initTestState,
+}
+
+export interface RootStateType {
+  testState: TestSateType
+}
+
+export const rootReducer = combineReducers({
+  testState: testReducer,
 })

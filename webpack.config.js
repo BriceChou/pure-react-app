@@ -85,6 +85,7 @@ module.exports = {
       '@type': path.resolve(__dirname, 'src/types'),
       '@utils': path.resolve(__dirname, 'src/utils'),
       '@image': path.resolve(__dirname, 'static/img'),
+      '@stores': path.resolve(__dirname, 'src/stores'),
       '@component': path.resolve(__dirname, 'src/components'),
     },
     symlinks: false,
