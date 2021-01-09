@@ -19,7 +19,7 @@ import { Redirect, Route, Switch, HashRouter } from 'react-router-dom'
 interface PropsType {}
 
 interface StateType {
-  pageLoading: LoadingStatusEnum
+  pageLoading?: LoadingStatusEnum
 }
 
 export default class App extends Component<PropsType, StateType> {
