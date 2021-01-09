@@ -14,6 +14,11 @@ module.exports = merge(common, {
     filename: '[name].js',
   },
   devServer: {
+    // hot: true,
+    // https: true,
+    // host: '0.0.0.0',
+    open: 'Google Chrome',
+    // openPage: ['bricechou', ''],
     port: pkg.config.port || 9988,
     contentBase: path.join(__dirname, 'dist'),
     // proxy: { // proxy URLs to backend development server

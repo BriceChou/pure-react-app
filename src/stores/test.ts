@@ -3,7 +3,7 @@ import type { ActionType } from '.'
 const UPDATE = 'TSET_UPDATE'
 
 export const initTestState: TestSateType = {
-  hello: '',
+  hello: 'init hello',
 }
 
 export interface TestSateType {

@@ -9,17 +9,25 @@ import { LoadingStatusEnum } from '@type/LoadingStatusEnum'
 
 interface PropsType {
   pageLoading: LoadingStatusEnum
+  updateTest?: typeof updateTest
   testState?: RootStateType['testState']
 }
 
 function Test(props: PropsType) {
-  const { testState } = props
-
+  const { testState, updateTest } = props
   return (
     <>
       <br />
       <br />
       Redux Test: {testState?.hello}
+      <br />
+      <button
+        onClick={() => {
+          updateTest && updateTest('bricechou')
+        }}>
+        {' '}
+        更新 state
+      </button>
       <br />
       <br />
       <NavLink to="/demo" activeClassName="hurray">
@@ -32,7 +40,9 @@ function Test(props: PropsType) {
 }
 
 function mapStateToProps(state: RootStateType) {
-  return state.testState
+  return {
+    testState: state.testState,
+  }
 }
 
 function mapDispatchToProps(dispatch: Dispatch) {

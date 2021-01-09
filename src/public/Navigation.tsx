@@ -43,6 +43,11 @@ export default function Navigation(props: PropsType) {
                 Login
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link js-scroll-trigger" to="/test">
+                TestRedux
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
