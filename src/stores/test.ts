@@ -1,26 +1,18 @@
-import type { ActionType } from '.'
-
-const UPDATE = 'TSET_UPDATE'
-
-export const initTestState: TestSateType = {
-  hello: 'init hello',
-}
+import { createReducer, createAction } from '@stores/utils'
 
 export interface TestSateType {
+  count: number
   hello: string
 }
 
-/**
- * actions to update test function
- *
- * @param text
- */
-export const updateTest = (text: string) => ({
-  type: UPDATE,
-  payload: {
-    hello: text,
-  },
-})
+const UPDATE = 'TSET_UPDATE',
+  ADD = 'TEST_ADD',
+  REMOVE = 'TEST_REMOVE'
+
+export const initTestState: TestSateType = {
+  count: 0,
+  hello: 'init hello',
+}
 
 /**
  *
@@ -29,15 +21,17 @@ export const updateTest = (text: string) => ({
  * @param state test init state
  * @param action dispatch value
  */
-export default function testReducer(state = initTestState, action: ActionType<TestSateType>): TestSateType {
-  const { type, payload } = action
-  switch (type) {
-    case UPDATE:
-      return {
-        ...state,
-        ...payload,
-      }
-    default:
-  }
-  return state
-}
+const testReducer = createReducer<TestSateType>(initTestState, {
+  [UPDATE]: (prev, next) => ({
+    ...prev,
+    ...next,
+  }),
+  [ADD]: prev => ({ ...prev, count: ++prev.count }),
+  [REMOVE]: prev => ({ count: prev.count ? --prev.count : prev.count }),
+})
+
+export const addTest = createAction(ADD)
+export const removeTest = createAction(REMOVE)
+export const updateTest = createAction(UPDATE, 'hello')
+
+export default testReducer
