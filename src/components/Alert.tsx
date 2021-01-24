@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 interface PropsType {
   message: string
@@ -15,18 +15,18 @@ interface PropsType {
 export default function Alert(props: PropsType) {
   const { visable = false, timeout = 250, type = 'primary', message = '' } = props
 
-  let timeoutId = null
+  const timeoutId = useRef(0)
   const [isShown, setIsShown] = useState(visable)
 
   useEffect(() => {
     setIsShown(true)
     return () => {
-      clearTimeout(timeoutId)
+      clearTimeout(timeoutId.current)
     }
   }, [visable, timeout, timeoutId])
 
   const closeAlert = () => {
-    timeoutId = setTimeout(() => {
+    timeoutId.current = window.setTimeout(() => {
       setIsShown(false)
     }, timeout)
   }

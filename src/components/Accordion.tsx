@@ -47,14 +47,20 @@ function Accordion(props: PropsType) {
 
   return (
     <>
-      {items.map(({ props: { label, children, index } }) => (
-        <AccordionItem
-          label={label}
-          children={children}
-          isCollapsed={bindIndex !== index}
-          handleClick={() => changeItem(index)}
-        />
-      ))}
+      {items.map(item => {
+        const {
+          // @ts-ignore
+          props: { label, children, index },
+        } = item
+        return (
+          <AccordionItem
+            label={label}
+            children={children}
+            isCollapsed={bindIndex !== index}
+            handleClick={() => changeItem(index)}
+          />
+        )
+      })}
     </>
   )
 }

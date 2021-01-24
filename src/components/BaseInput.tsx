@@ -4,7 +4,7 @@
  * 此组件直接使用亦可，推荐对其进行再次封装使用
  */
 
-import React, { useState, useEffect, memo } from 'react'
+import React, { useState, useEffect } from 'react'
 import type { InputHTMLAttributes, ChangeEvent } from 'react'
 
 interface InputPropsType {
