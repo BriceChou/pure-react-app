@@ -2,13 +2,31 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@css/*": ["static/css/*"],
-      "@image/*": ["static/img/*"],
-      "@mock*": ["src/mock/*", "src/mock"],
-      "@component/*": ["src/components/*"],
-      "@type*": ["src/types/*", "src/types"],
-      "@utils*": ["src/utils/*", "src/utils"],
-      "@stores*": ["src/stores/*", "src/stores"],
+      "@css/*": [
+        "static/css/*"
+      ],
+      "@image/*": [
+        "static/img/*"
+      ],
+      "@mock*": [
+        "src/mock/*",
+        "src/mock"
+      ],
+      "@component/*": [
+        "src/components/*"
+      ],
+      "@type*": [
+        "src/types/*",
+        "src/types"
+      ],
+      "@utils*": [
+        "src/utils/*",
+        "src/utils"
+      ],
+      "@stores*": [
+        "src/stores/*",
+        "src/stores"
+      ]
     },
     "alwaysStrict": true,
     "declaration": true,
@@ -25,19 +43,36 @@
     "target": "es2019",
     "outDir": "dist",
     "module": "commonjs",
-    "lib": ["es6", "dom"],
+    "lib": [
+      "es6",
+      "dom"
+    ],
     "sourceMap": true,
     "allowJs": true,
-    "jsx": "react",
+    "jsx": "preserve",
     "moduleResolution": "node",
     "rootDir": "src",
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noImplicitAny": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "isolatedModules": true
   },
-  "types": ["typePatches"],
-  "include": ["src/**/*", "index.d.ts"],
-  "exclude": ["node_modules", "dist", "scripts", "webpack*"],
+  "types": [
+    "typePatches"
+  ],
+  "include": [
+    "src/**/*",
+    "index.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "scripts",
+    "webpack*"
+  ],
   "compileOnSave": false
 }
