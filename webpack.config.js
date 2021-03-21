@@ -162,17 +162,6 @@ module.exports = {
       //     },
       //   ],
       // },
-      // {
-      //   test: /\.m?js$/,
-      //   include: [path.resolve(__dirname, 'src')],
-      //   exclude: /(node_modules)/,
-      //   use: {
-      //     loader: 'babel-loader',
-      //     options: {
-      //       cacheDirectory: true,
-      //     },
-      //   },
-      // },
       {
         test: /\.tsx?$/,
         include: [path.resolve(__dirname, 'src')],
