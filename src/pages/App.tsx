@@ -7,6 +7,7 @@ import About from './about'
 import Login from './login'
 import Gallery from './gallery'
 import AuthExample from './auth'
+import Activity from './activity'
 import Layout from '../public/Layout'
 import React, { Component } from 'react'
 import type { DataErrorType } from '@mock'
@@ -99,6 +100,7 @@ export default class App extends Component<PropsType, StateType> {
             <Route path="/test" component={Test} />
             <Route path="/gallery" component={Gallery} />
             <Route path="/blog/:id" component={Blog} />
+            <Route path="/activity" component={Activity} />
             <Route path="/auth" component={AuthExample} />
             <Route path="/blog" render={({ location }) => <Redirect to={`/blog/1${location.search}`} />} />
             <Route path="*">
